@@ -1,0 +1,47 @@
+<%- include('../layouts/header.ejs') %>
+<%- include('../layouts/sidebar.ejs') %>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+     
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="content">
+    <br><br>
+     <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Edit Student</h3>
+          
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <form action="/admin/studentupdate/<%= d._id %>" method="post">
+                <div class="form-group">
+                  <label for="">Name</label>
+                  <input type="text" value="<%= d.name %>" name="name" class="form-control" required> 
+                </div>
+                <div class="form-group">
+                  <label for="">Email</label>
+                  <input type="Email" value="<%= d.email %>" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="">Password</label>
+                  <input readonly value="<%= d.password %>" name="password" class="form-control" required>
+                </div>
+                <button class="btn btn-warning" type="submit"> Update</button>
+               </form>
+        </div>
+        <!-- /.card-body -->
+      </div>
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+
+ 
+<%- include('../layouts/footer.ejs') %>
