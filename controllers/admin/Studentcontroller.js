@@ -292,7 +292,6 @@ class StudentController {
         try {
             res.clearCookie("token")
             res.redirect('/')
-
         } catch (error) {
             console.log(error)
         }

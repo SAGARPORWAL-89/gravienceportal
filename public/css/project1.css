@@ -12,7 +12,7 @@
     background-position: center;
 }
 .num {
-    font-size: 32px;
+    font-size: 32px; 
     font-weight: 800;
     color: black;
 }
@@ -44,7 +44,7 @@
     padding-top: 8px;
     font-size: 22px;
     color: white;
-    background-color: #2a3999;
+    background-color: maroon;
 
 }
 
@@ -121,7 +121,7 @@
     position: absolute;
     margin: 0;
     right: 46%;
-    top: 70px;
+    top: 40px;
     width: 100px;
     height: 30px;
     border-bottom: 10px solid maroon;
@@ -162,7 +162,7 @@
 }
 
 .containh button {
-    padding: 2vh 6vh;
+    padding: 1.4vh 5vh;
     background: maroon;
     border-radius: 39px;
     color: white;
@@ -182,8 +182,7 @@
     color: transparent;
 }
 .box{
-    position: relative;
-    overflow: hidden;
+    
 }
 .box img{
     width: 300px;
@@ -199,7 +198,7 @@
     left: 26px;
     
 }
-.boxh::after{
+/* .boxh::after{
     content: "";
     position: absolute;
     top: -74px;
@@ -209,7 +208,7 @@
     background-color: #0000009c;
     left: -25px;
     z-index: 0;
-}
+} */
 .boxh h4{
     position: relative;
     left: 16px;
@@ -218,7 +217,7 @@
     z-index: 1;
 }
 .paraf{
-    background: linear-gradient(#800000de,transparent)          
+    background: linear-gradient(#800000de,transparent);         
 }
 .footer-content{
    

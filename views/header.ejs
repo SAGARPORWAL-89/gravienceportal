@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- //tailwind css  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font awesome cdn 6.4  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
@@ -23,25 +28,68 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 num pt-4">+9189660118..</div>
-                <div class="col-md-4 pt-4"><h1><span class="text-warning">MPCTGrivance</span>Portal</h1></div>
-                <div class="col-md-4 sgar pt-4">
+    <!-- <div class="container-fluid"> -->
+        <div class="max-w-[1170px] mx-auto">
+            <div class="row items-center" >
+                <div class="col-md-4 num ">+9189660118..</div>
+                <div class="col-md-4 text-[30px] font-[600]"><h1><span class="text-warning ">MPCTGrivance</span>Portal</h1></div>
+                <div class="col-md-4 sgar">
                     <ul class="d-flex">
-                        <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href=""class="nav-link"><i class="fa fa-twitter" ></i></a></li>
-                        <li><a href=""class="nav-link"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="" class="nav-link"><i class="fa fa-instagram"></i></a></li>   
+                        <li class="nav-item"><a href="" class="nav-link"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href=""class="nav-link"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href=""class="nav-link"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="" class="nav-link"><i class="fa-brands fa-linkedin-in"></i></a></li>   
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <nav class="navbar navbar-expand-lg nav1 sticky-top">
-        <div class="container-fluid">
+    <!-- </div> -->
+    <!-- navbar start  -->
+     <nav class="bg-[linear-gradient(#800000de,transparent)] py-[20px]">
+     <div class="max-w-[1300px] justify-between mx-auto flex items-center">
+      <div class="text-white font-[600] text-[25px]">
+        <h1>Grievance Portal</h1>
+      </div>
+      <div>
+        <ul class="hidden lg:flex space-x-6 text-[23px] text-white font-[500] hover:no-underline pt-[5px]">
+          <li><a href="http://localhost:3000/" class="hover:no-underline hover:text-black">Home</a></li>
+          <li><a href="http://localhost:3000/about" class="hover:no-underline hover:text-black">About</a></li>
+          <li><a href="" class="hover:no-underline hover:text-black">Grievence Rederessel system</a></li>
+          <li><a href="http://localhost:3000/contact" class="hover:no-underline hover:text-black">Contact</a></li>
+          <li><a href="http://localhost:3000/benefits" class="hover:no-underline hover:text-black">Benefits</a></li>
+          <li><a class="bg-white p-[6px_30px] text-[20px] font-[600] text-black cursor-pointer">Login</a></li>
+        </ul>
+      </div>
+      <!-- mobile screen  -->
+      <div id="hamburger" class="lg:hidden cursor-pointer relative right-[30px] z-[40]">
+        <i class="fa fa-bars font-[30px] text-[25px]" aria-hidden="false"></i>
+      </div>
+      <div id="menu" class="hidden bg-[maroon] h-[100vh] absolute inset-0 z-[20] origin-top duration-300">
+        <ul class="h-full grid place-items-center py-10 text-[25px] text-white font-[500] hover:no-underline">
+          <li><a id="hlink" href="http://localhost:3000/" class="hover:no-underline hover:text-black">Home</a></li>
+          <li><a id="hlink" href="http://localhost:3000/about" class="hover:no-underline hover:text-black">About</a></li>
+          <li><a id="hlink" href="#" class="hover:no-underline hover:text-black">Grievence Rederessel system</a></li>
+          <li><a id="hlink" href="http://localhost:3000/contact" class="hover:no-underline hover:text-black" >Contact</a></li>
+          <li><a id="hlink" href="http://localhost:3000/benefits" class="hover:no-underline hover:text-black" >Benefits</a></li>
+         
+          <button class="bg-white p-[8px_30px] text-black">Login</button>
+        </ul>
+      </div>
+     </div>
+    </nav>
+
+    <script>
+      const hamburger = document.querySelector('#hamburger')
+      const menu = document.querySelector('#menu')
+      const hlink = document.querySelector('#hlink')
+      const fabars = document.querySelector('.bars')
+
+      hamburger.addEventListener('click',()=>{
+            menu.classList.toggle('hidden') 
+      })
+    </script>
+
+        <!-- <div class="container-fluid">
           <a class="navbar-brand" href="#"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span><i class="fa fa-bars"></i></span>
@@ -49,7 +97,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="http://localhost:3000/">Home</a>
+                <a class="nav-link active underline" aria-current="page" href="http://localhost:3000/">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="http://localhost:3000/about">About</a>
@@ -73,5 +121,5 @@
           </div>
           
         </div>
-      </nav>
+      </nav> -->
 

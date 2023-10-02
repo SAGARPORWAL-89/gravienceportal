@@ -12,7 +12,9 @@ const CourseController = require('../controllers/admin/CourseController');
 route.get('/',FrontController.home)
 route.get('/about',FrontController.about)
 route.get('/contact',FrontController.contact)
-route.get('/login',FrontController.login)
+route.get('/help',FrontController.help)
+route.get('/benefits',FrontController.benefits)
+
 
 
 // Teacher controller
@@ -28,7 +30,7 @@ route.get('/displaycomplaint',checkauth,adminController.complaintdisplay)
 // route.post('/admin/verifylogin',checkauth,adminController.verifylogin)
 
 
-// admin student controller 
+//student controller 
 route.get('/admin/addstudent',checkauth,StudentController.addstudent)
 route.post('/studentinsert',checkauth,StudentController.studentinsert)
 route.get('/admin/studentview/:id',checkauth,StudentController.viewstudent)

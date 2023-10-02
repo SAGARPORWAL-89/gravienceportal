@@ -21,9 +21,16 @@ class FrontController {
             console.log(error)
         }
     }
-    static login = async (req, res) => {
+    static help = async (req, res) => {
         try {
-            res.render('login')
+            res.render('help')
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    static benefits = async (req, res) => {
+        try {
+            res.render('benefits')
         } catch (error) {
             console.log(error)
         }
